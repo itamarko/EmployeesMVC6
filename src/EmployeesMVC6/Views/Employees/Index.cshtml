@@ -1,0 +1,28 @@
+﻿@model IEnumerable<EmployeeViewModel>
+
+@if(Model != null)
+{
+    <table class="table table-sm table-striped table-bordered m-2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Age</th>
+                <th>Year of birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var r in Model)
+            {
+                <tr>
+                    <td>@r.Id </td>
+                    <td>@r.Name </td>
+                    <td>@r.Salary </td>
+                    <td>@r.Age </td>
+                    <td>@r.YearOfBirth </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
